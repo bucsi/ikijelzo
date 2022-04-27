@@ -1,0 +1,32 @@
+[
+    {
+        "username": "bucsi",
+        "password": "$2y$10$uSb0Wm8OFQAPrJ59haWR..I5ucIC\/IGeoV.iHzEzedZPtRFkk\/9E2",
+        "fullname": "Bucsi",
+        "roles": [
+            "admin",
+            "user"
+        ],
+        "id": "0"
+    },
+    {
+        "username": "szilvi",
+        "password": "$2y$10$uSb0Wm8OFQAPrJ59haWR..I5ucIC\/IGeoV.iHzEzedZPtRFkk\/9E2",
+        "fullname": "Szilvi",
+        "roles": [
+            "admin",
+            "user"
+        ],
+        "id": "1"
+    },
+    {
+        "username": "thor",
+        "password": "$2y$10$uSb0Wm8OFQAPrJ59haWR..I5ucIC\/IGeoV.iHzEzedZPtRFkk\/9E2",
+        "fullname": "Thor",
+        "roles": [
+            "admin",
+            "user"
+        ],
+        "id": "2"
+    }
+]
