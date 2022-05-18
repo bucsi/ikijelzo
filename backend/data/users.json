@@ -1,32 +1,29 @@
-[
-    {
+{
+    "6284ed8db9052": {
         "username": "bucsi",
-        "password": "$2y$10$uSb0Wm8OFQAPrJ59haWR..I5ucIC\/IGeoV.iHzEzedZPtRFkk\/9E2",
+        "password": "$2y$10$Iovgz44hTpuQxI\/0CZPodOoJ8Y\/8XtoRL1rnRAHom7Wll8myNgIgq",
         "fullname": "Bucsi",
         "roles": [
-            "admin",
             "user"
         ],
-        "id": "0"
+        "id": "6284ed8db9052"
     },
-    {
+    "6284ed8dc5171": {
         "username": "szilvi",
-        "password": "$2y$10$uSb0Wm8OFQAPrJ59haWR..I5ucIC\/IGeoV.iHzEzedZPtRFkk\/9E2",
+        "password": "$2y$10$GImUfY8OncS4uTcaxKrP7.cobe9eDqzdGKGl7LTTpegWWcQxsOdOW",
         "fullname": "Szilvi",
         "roles": [
-            "admin",
             "user"
         ],
-        "id": "1"
+        "id": "6284ed8dc5171"
     },
-    {
+    "6284ed8dd1189": {
         "username": "thor",
-        "password": "$2y$10$uSb0Wm8OFQAPrJ59haWR..I5ucIC\/IGeoV.iHzEzedZPtRFkk\/9E2",
+        "password": "$2y$10$dVTPfvNbvKv7hkvFmHxY8eFh1AgOcn90fbSyF.9x6tgyuFfcO8312",
         "fullname": "Thor",
         "roles": [
-            "admin",
             "user"
         ],
-        "id": "2"
+        "id": "6284ed8dd1189"
     }
-]
+}

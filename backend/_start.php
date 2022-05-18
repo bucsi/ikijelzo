@@ -24,3 +24,7 @@ function post_letezik($kulcs)
 function error($msg){
     return $msg ? "<p class='error'>$msg</p>" : "";
 }
+
+function success($msg){
+    return $msg ? "<p class='success'>$msg</p>" : "";
+}

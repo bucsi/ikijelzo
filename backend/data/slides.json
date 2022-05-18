@@ -1,1 +1,16 @@
-[]
+{
+    "6284edd8700e9": {
+        "file": "uploads\/error.png",
+        "duration": 30,
+        "name": "Teszt1",
+        "id": "6284edd8700e9"
+    },
+    "6284ee99354dd": {
+        "file": "uploads\/4KjQlD2MMOyFeo5wbn5bbLZRY1Q.jpg",
+        "duration": 30,
+        "name": "asd",
+        "user": "bucsi",
+        "active": true,
+        "id": "6284ee99354dd"
+    }
+}
