@@ -13,12 +13,12 @@ if (!$auth->is_authenticated()) {
 
 <body>
     <header>
-        <form action="logout.php" method="get"><input type="submit" value="Kilépés, mint <?= $auth->authenticated_user()["fullname"] ?>">
+        <form action="logout.php" method="get"><input type="submit" value="Kilépés">
         </form>
     </header>
     <main>
 
-        <h1>IKijelző – Főmenü</h1>
+        <h1>IKijelző – belépve, mint <?= $auth->authenticated_user()["fullname"] ?></h1>
         <details>
 
             <summary>
