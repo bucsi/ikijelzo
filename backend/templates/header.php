@@ -92,6 +92,14 @@
         input[type=submit] {
             cursor: pointer;
         }
+        form.confirm-delete{
+            display: inline-block;
+        }
+        input.confirm-delete-btn{
+            background-color: hsl(5, 59%, 57%);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
     </style>
     <script defer>
         document.querySelectorAll("button").forEach(b => b.addEventListener(e => {

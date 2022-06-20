@@ -81,7 +81,12 @@ if (!$auth->is_authenticated()) {
                                     <input type="submit" value="🔕">
                                 </form>
                             </td>
-                            <td><button>❌</button></td>
+                            <td>
+                                <form action="delete.php" method="post">
+                                    <input type="hidden" name="id" value="<?= $slide["id"] ?>">
+                                    <input type="submit" value="❌">
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -133,7 +138,12 @@ if (!$auth->is_authenticated()) {
                                     <input type="submit" value="🔔">
                                 </form>
                             </td>
-                            <td><button>❌</button></td>
+                            <td>
+                                <form action="delete.php" method="post">
+                                    <input type="hidden" name="id" value="<?= $slide["id"] ?>">
+                                    <input type="submit" value="❌">
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
