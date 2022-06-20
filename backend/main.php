@@ -9,11 +9,6 @@ if (!$auth->is_authenticated()) {
     die;
 }
 
-function get_next_id()
-{
-    return 99;
-}
-
 ?>
 
 <body>

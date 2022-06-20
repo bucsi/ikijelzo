@@ -3,7 +3,7 @@ require_once("_start.php");
 header("Access-Control-Allow-Origin: *");
 $ids = array_keys($slides->findAll(["active"=>true]));
 
-if(count($_GET) === 0 || !get_letezik("id") || !in_array($_GET["id"], $ids)) {
+if(count($_GET) === 0 || !get_exists("id") || !in_array($_GET["id"], $ids)) {
     echo(json_encode($slides->findById($ids[0])));
     die;
 }else{
