@@ -10,6 +10,11 @@
     <style>
         :root {
             --primary: #517d81;
+            --base-layer: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        body {
+            background-color: hsl(45, 29%, 97%);
         }
 
         p.error {
@@ -25,19 +30,24 @@
         }
 
         details {
-            background-color: #517d81;
-            color: white;
             padding: 1em;
-            border: 10px solid #517d81;
-            transition: ease-in 0.2s;
+            /* transition: ease-in 0.2s; */
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+            border-radius: 2px;
+            box-shadow: var(--base-layer);
+            background-color: #fff;
+        }
+
+        details:hover,
+        details[open]:hover {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
         }
 
         details[open] {
-            background-color: initial;
-            color: black;
-            padding: 1em;
-            border: 10px solid #517d81;
-            transition: ease-in 0.2s;
+            /* transition: ease-in 0.2s; */
+            box-shadow: var(--base-layer);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
         }
 
         summary {
@@ -46,9 +56,17 @@
             margin-bottom: 0;
         }
 
-        summary h3 {
+
+        summary::marker {
+            font-weight: 700;
+            font-size: 1.5em;
+            color: #7a8174
+        }
+
+        summary h2 {
             display: inline;
         }
+
 
         input[type=file] {
             background-color: var(--primary);
@@ -68,6 +86,17 @@
             user-select: none;
             vertical-align: middle;
             white-space: nowrap;
+            cursor: pointer;
+        }
+
+        input[type=submit] {
+            cursor: pointer;
         }
     </style>
+    <script defer>
+        document.querySelectorAll("button").forEach(b => b.addEventListener(e => {
+            e.preventDefault();
+            console.log("puff")
+        }));
+    </script>
 </head>
