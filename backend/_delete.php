@@ -12,7 +12,8 @@ if(!post_exists("id")) {
     header("Location:main.php");
     die;
 }
-
+$slide = $slides->findById($_POST["id"]);
+unlink($slide["file"]);
 $slides->delete($_POST["id"]);
 
 
