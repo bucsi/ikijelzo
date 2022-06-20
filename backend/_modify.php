@@ -8,13 +8,8 @@ if (!$auth->is_authenticated()) {
     die;
 }
 
-if (!post_exists("name")) {
-    header("Location:main.php?error=Nem mósodítható üresre a slide neve!");
-    die;
-}
-
-if (!post_exists("duration")) {
-    header("Location:main.php?error=Nem módosítható üresre a slide megjelenítési ideje!");
+if (!post_exists("name") || !post_exists("duration") || !post_exists("id")) {
+    header("Location:main.php");
     die;
 }
 
