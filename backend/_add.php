@@ -8,12 +8,12 @@ if (!$auth->is_authenticated()) {
     die;
 }
 
-if (!post_letezik("name")) {
+if (!post_exists("name")) {
     header("Location:main.php?error=Nem adtál nevet a slide-nak!");
     die;
 }
 
-if (!post_letezik("duration")) {
+if (!post_exists("duration")) {
     header("Location:main.php?error=Nem adtál megjelenítési időt a slide-nak!");
     die;
 }
@@ -45,10 +45,10 @@ if (!move_uploaded_file($_FILES["image_file"]["tmp_name"], $target_file)) {
 
 $slides->add([
     "file" => $target_file,
-    "duration"=>intval($_POST["duration"]),
-    "name"=>$_POST["name"],
-    "user"=>$auth->authenticated_user()["username"],
-    "active"=>true,
+    "duration" => intval($_POST["duration"]),
+    "name" => $_POST["name"],
+    "user" => $auth->authenticated_user()["username"],
+    "active" => true,
 ]);
 
 header("Location:main.php?success=Slide sikeresen hozzáadva!");

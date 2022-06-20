@@ -7,24 +7,22 @@ require_once("lib/auth.php");
 $slides = new Storage(new JsonIO("data/slides.json"));
 $auth = new Auth(new Storage(new JsonIO("data/users.json")));
 
-function get_letezik($kulcs)
+function get_exists(string $key): bool
 {
-    return isset($_GET[$kulcs]) && strlen($_GET[$kulcs])>0 ? $_GET[$kulcs] : false;
+    return isset($_GET[$key]) && strlen($_GET[$key]) > 0 ? $_GET[$key] : false;
 }
 
-function post_isset($kulcs){
-    return isset($_POST[$kulcs]) ? $_POST[$kulcs] : false;
-}
-
-function post_letezik($kulcs)
+function post_exists(string $key): bool
 {
-    return isset($_POST[$kulcs]) && strlen($_POST[$kulcs])>0 ? $_POST[$kulcs] : false;
+    return isset($_POST[$key]) && strlen($_POST[$key]) > 0 ? $_POST[$key] : false;
 }
 
-function error($msg){
+function error(string $msg): string
+{
     return $msg ? "<p class='error'>$msg</p>" : "";
 }
 
-function success($msg){
+function success(string $msg): string
+{
     return $msg ? "<p class='success'>$msg</p>" : "";
 }
