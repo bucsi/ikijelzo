@@ -48,7 +48,7 @@ $slides->add([
     "duration" => intval($_POST["duration"]),
     "name" => $_POST["name"],
     "user" => $auth->authenticated_user()["username"],
-    "active" => true,
+    "active" => $_POST["active"] ?? false,
 ]);
 
 header("Location:main.php?success=Slide sikeresen hozzáadva!");

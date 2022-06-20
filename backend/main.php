@@ -25,11 +25,12 @@ if (!$auth->is_authenticated()) {
                 <h2>Új slide felvétele</h2>
             </summary>
             <form action="_add.php" method="POST" enctype="multipart/form-data">
-                <?= success(get_exists("success")) ?>
-                <?= error(get_exists("error")) ?><br>
+                <?= success($_GET["success"] ?? "") ?>
+                <?= error($_GET["error"] ?? "") ?><br>
                 <input type="text" name="name" placeholder="Név"><br>
                 <input type="number" name="duration" placeholder="Megjelenítési idő (mp)"><br>
-                <input type="file" name="image_file" id="image_file"><br><br>
+                <input type="file" name="image_file" id="image_file"><br>
+                <input type="checkbox" name="active" id="active"> <label for="active">Legyen rögtön aktív?</label><br>
                 <input type="submit" value="Hozzáadás">
             </form>
         </details>
