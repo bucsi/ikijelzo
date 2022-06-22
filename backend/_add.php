@@ -59,7 +59,7 @@ $slides->add([
     "duration" => intval($_POST["duration"]),
     "name" => $_POST["name"],
     "user" => $auth->authenticated_user()["username"],
-    "active" => $_POST["active"] ?? false,
+    "active" => $_POST["active"] === "on",
     "video" => $extension === "mp4" && $mime === "video/mp4"
 ]);
 
