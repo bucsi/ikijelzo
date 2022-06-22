@@ -1,1 +1,1 @@
-export const sleep = async ms => new Promise(r => setTimeout(r, ms))
+export const secToMs = (seconds) => seconds*1000
