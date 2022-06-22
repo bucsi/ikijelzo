@@ -149,6 +149,32 @@ if (!$auth->is_authenticated()) {
                 </tbody>
             </table>
         </details>
+
+        <details>
+            <summary>
+                <h2>Kijelző információk</h2>
+            </summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Időbélyegző</th>
+                        <th>Kijelző neve</th>
+                        <th>Kijelző IP-címe</th>
+                        <th>Letöltött file</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($clients->findAll() as $client) : ?>
+                        <tr>
+                            <td><?= $client["request-time"] ?></td>
+                            <td><?= $client["client-name"] ?></td>
+                            <td><?= $client["remote-addr"] ?></td>
+                            <td><?= $client["response"]["file"] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </details>
     </main>
 </body>
 
