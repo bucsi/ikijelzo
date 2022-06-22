@@ -11,13 +11,13 @@ if (count($ids) === 0) {
     die;
 }
 
-if(count($_GET) === 0 || !get_exists("id") || !in_array($_GET["id"], $ids)) {
-    echo(json_encode($slides->findById($ids[0])));
+if (count($_GET) === 0 || !get_exists("id") || !in_array($_GET["id"], $ids)) {
+    echo (json_encode($slides->findById($ids[0])));
     die;
-}else{
-    $i = array_search($_GET["id"], $ids) +1;
-    if ($i === count($ids)){
+} else {
+    $i = array_search($_GET["id"], $ids) + 1;
+    if ($i === count($ids)) {
         $i = 0;
     }
-    echo(json_encode($slides->findById($ids[$i])));
+    echo (json_encode($slides->findById($ids[$i])));
 }
