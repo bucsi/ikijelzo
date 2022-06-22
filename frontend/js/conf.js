@@ -1,5 +1,6 @@
 const config = {
-    backendUrl: 'http://127.0.0.1:3000',
+    backendUrl: 'http://localhost:3000',
+    timeout: 60
 }
 
 export default config

@@ -4,9 +4,7 @@ header("Access-Control-Allow-Origin: *");
 $ids = array_keys($slides->findAll(["active" => true]));
 if (count($ids) === 0) {
     echo (json_encode([
-        "file" => "uploads\/error.png",
-        "duration" => 30,
-        "id" => "nincs-aktiv"
+        "file" => "no active file",
     ]));
     die;
 }
