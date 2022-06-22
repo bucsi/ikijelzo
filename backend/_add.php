@@ -23,12 +23,20 @@ if (!isset($_FILES["image_file"]) || $_FILES["image_file"]["size"] == 0) {
     die;
 }
 
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["image_file"]["name"]);
-$uploadOk = false;
-$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-$check = getimagesize($_FILES["image_file"]["tmp_name"]);
-if ($check === false) {
+if (!((($_FILES["image_file"]["type"] == "video/mp4")
+    || ($_FILES["image_file"]["type"] == "image/png")
+    || ($_FILES["image_file"]["type"] == "image/gif")
+    || ($_FILES["image_file"]["type"] == "image/jpeg"))
+
+    && ($_FILES["image_file"]["size"] < 2000000)
+)) {
+    header("Location:main.php?error=Hibás formátumú fájl!");
+    die;
+}
+
+$target_file = "uploads/" . $_FILES["image_file"]["name"];
+
+if ($_FILES["image_file"]["error"] > 0) {
     header("Location:main.php?error=Hibás formátumú fájl!");
     die;
 }
@@ -43,12 +51,16 @@ if (!move_uploaded_file($_FILES["image_file"]["tmp_name"], $target_file)) {
     die;
 }
 
+$extension = pathinfo($_FILES['image_file']['name'], PATHINFO_EXTENSION);
+$mime = $_FILES["image_file"]["type"];
+
 $slides->add([
     "file" => $target_file,
     "duration" => intval($_POST["duration"]),
     "name" => $_POST["name"],
     "user" => $auth->authenticated_user()["username"],
     "active" => $_POST["active"] ?? false,
+    "video" => $extension === "mp4" && $mime === "video/mp4"
 ]);
 
 header("Location:main.php?success=Slide sikeresen hozzáadva!");

@@ -2,9 +2,9 @@
     "6284edd8700e9": {
         "file": "uploads\/error.png",
         "duration": 30,
-        "name": "Teszt1",
+        "name": "Tesztem",
         "user": "bucsi",
-        "active": true,
+        "active": false,
         "id": "6284edd8700e9"
     },
     "6284ee99354dd": {
@@ -12,7 +12,25 @@
         "duration": 30,
         "name": "asd",
         "user": "bucsi",
-        "active": true,
+        "active": false,
         "id": "6284ee99354dd"
+    },
+    "62b105a84eeb1": {
+        "file": "uploads\/c.png",
+        "duration": 12,
+        "name": "c\u00e9",
+        "user": "szilvi",
+        "active": false,
+        "video": false,
+        "id": "62b105a84eeb1"
+    },
+    "62b106044f13b": {
+        "file": "uploads\/horizontally spinning rat.mp4",
+        "duration": 19,
+        "name": "rat",
+        "user": "szilvi",
+        "active": false,
+        "video": true,
+        "id": "62b106044f13b"
     }
 }
