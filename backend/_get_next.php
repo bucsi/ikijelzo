@@ -1,7 +1,15 @@
 <?php
 require_once("_start.php");
 header("Access-Control-Allow-Origin: *");
-$ids = array_keys($slides->findAll(["active"=>true]));
+$ids = array_keys($slides->findAll(["active" => true]));
+if (count($ids) === 0) {
+    echo (json_encode([
+        "file" => "uploads\/error.png",
+        "duration" => 30,
+        "id" => "nincs-aktiv"
+    ]));
+    die;
+}
 
 if(count($_GET) === 0 || !get_exists("id") || !in_array($_GET["id"], $ids)) {
     echo(json_encode($slides->findById($ids[0])));
