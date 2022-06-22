@@ -1,38 +1,38 @@
 {
-    "6284edd8700e9": {
-        "file": "uploads\/error.png",
+    "62b384f05dd6e": {
+        "file": "uploads\/targyfelvetel.png",
         "duration": 10,
-        "name": "Tesztem",
+        "name": "T\u00e1rgyfelv\u00e9tel",
         "user": "bucsi",
         "active": true,
         "video": false,
-        "id": "6284edd8700e9"
+        "id": "62b384f05dd6e"
     },
-    "6284ee99354dd": {
-        "file": "uploads\/4KjQlD2MMOyFeo5wbn5bbLZRY1Q.jpg",
+    "62b385ae64d1f": {
+        "file": "uploads\/targyfelvetel2.png",
         "duration": 10,
-        "name": "asd",
+        "name": "T\u00e1rgyfelv\u00e9tel 2",
         "user": "bucsi",
+        "active": true,
         "video": false,
-        "active": false,
-        "id": "6284ee99354dd"
+        "id": "62b385ae64d1f"
     },
-    "62b105a84eeb1": {
-        "file": "uploads\/c.png",
-        "duration": 12,
-        "name": "c\u00e9",
-        "user": "szilvi",
+    "62b385bf79cf4": {
+        "file": "uploads\/sigbovik.png",
+        "duration": 20,
+        "name": "Konferencia programf\u00fczet",
+        "user": "bucsi",
         "active": false,
         "video": false,
-        "id": "62b105a84eeb1"
+        "id": "62b385bf79cf4"
     },
-    "62b106044f13b": {
-        "file": "uploads\/horizontally spinning rat.mp4",
-        "duration": 0,
-        "name": "rat (video)",
-        "user": "szilvi",
+    "62b385f8de309": {
+        "file": "uploads\/horizontally_spinning_rat.mp4",
+        "duration": 1,
+        "name": "Pr\u00f3ba vide\u00f3",
+        "user": "bucsi",
         "active": true,
         "video": true,
-        "id": "62b106044f13b"
+        "id": "62b385f8de309"
     }
 }
