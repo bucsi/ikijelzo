@@ -5,6 +5,7 @@ require_once("lib/io.php");
 require_once("lib/storage.php");
 require_once("lib/auth.php");
 $slides = new Storage(new JsonIO("data/slides.json"));
+$clients = new Storage(new JsonIO("data/clients.json"));
 $auth = new Auth(new Storage(new JsonIO("data/users.json")));
 
 function get_exists(string $key): bool

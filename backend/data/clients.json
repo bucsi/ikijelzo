@@ -1,0 +1,32 @@
+{
+    "62b36a0d0c6de": {
+        "remote-addr": "kaki",
+        "remote-host": null,
+        "request-time": null,
+        "client-name": "n\u00e9vtelen",
+        "response": {
+            "file": "uploads\/error.png",
+            "duration": 10,
+            "name": "Tesztem",
+            "user": "bucsi",
+            "active": true,
+            "id": "6284edd8700e9"
+        },
+        "id": "62b36a0d0c6de"
+    },
+    "62b36d9cb1856": {
+        "remote-addr": "::1",
+        "remote-host": "nincs remote host",
+        "request-time": "2022\/06\/22 19:06:32",
+        "client-name": "bucsi-pc:local",
+        "response": {
+            "file": "uploads\/error.png",
+            "duration": 10,
+            "name": "Tesztem",
+            "user": "bucsi",
+            "active": true,
+            "id": "6284edd8700e9"
+        },
+        "id": "62b36d9cb1856"
+    }
+}
