@@ -9,6 +9,6 @@ export default async function load(old_id) {
         slide.file = `${config.backendUrl}/${slide.file}`
         return slide
     } catch (err) {
-        return { file: "background.png", duration: config.timeout, error: err }
+        return { file: "background.png", error: err }
     }
 }
