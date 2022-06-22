@@ -1,17 +1,19 @@
 {
     "6284edd8700e9": {
         "file": "uploads\/error.png",
-        "duration": 30,
+        "duration": 10,
         "name": "Tesztem",
         "user": "bucsi",
-        "active": false,
+        "active": true,
+        "video": false,
         "id": "6284edd8700e9"
     },
     "6284ee99354dd": {
         "file": "uploads\/4KjQlD2MMOyFeo5wbn5bbLZRY1Q.jpg",
-        "duration": 30,
+        "duration": 10,
         "name": "asd",
         "user": "bucsi",
+        "video": false,
         "active": false,
         "id": "6284ee99354dd"
     },
@@ -26,10 +28,10 @@
     },
     "62b106044f13b": {
         "file": "uploads\/horizontally spinning rat.mp4",
-        "duration": 19,
-        "name": "rat",
+        "duration": 0,
+        "name": "rat (video)",
         "user": "szilvi",
-        "active": false,
+        "active": true,
         "video": true,
         "id": "62b106044f13b"
     }

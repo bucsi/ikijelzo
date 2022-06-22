@@ -19,7 +19,7 @@ if (!$auth->is_authenticated()) {
     <main>
 
         <h1>IKijelző – belépve, mint <?= $auth->authenticated_user()["fullname"] ?></h1>
-        <details>
+        <details <?= count($_GET)>0 ? "open" : ""?> >
 
             <summary>
                 <h2>Új slide felvétele</h2>
@@ -68,9 +68,13 @@ if (!$auth->is_authenticated()) {
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="cell-input">
-                                        <input type="number" name="duration" placeholder="Megjelenítési idő (mp)" value="<?= $slide["duration"] ?>">
-                                    </div>
+                                    <?php if($slide["video"]): ?>
+                                        <output>videó</output>
+                                    <?php else: ?>
+                                        <div class="cell-input">
+                                            <input type="number" name="duration" placeholder="Megjelenítési idő (mp)" value="<?= $slide["duration"] ?>">
+                                        </div>
+                                    <?php endif; ?>
                                 </td>
                                 <td><?= $slide["user"] ?></td>
                                 <td><input type="submit" value="💾"></td>
@@ -125,9 +129,13 @@ if (!$auth->is_authenticated()) {
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="cell-input">
-                                        <input type="number" name="duration" placeholder="Megjelenítési idő (mp)" value="<?= $slide["duration"] ?>">
-                                    </div>
+                                <?php if($slide["video"]): ?>
+                                        <output>videó</output>
+                                    <?php else: ?>
+                                        <div class="cell-input">
+                                            <input type="number" name="duration" placeholder="Megjelenítési idő (mp)" value="<?= $slide["duration"] ?>">
+                                        </div>
+                                    <?php endif; ?>
                                 </td>
                                 <td><?= $slide["user"] ?></td>
                                 <td><input type="submit" value="💾"></td>

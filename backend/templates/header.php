@@ -100,6 +100,16 @@
             text-transform: uppercase;
             font-weight: 700;
         }
+        table td{
+            text-align: center;
+        }
+        output{
+            font-family: monospace;
+        }
+        table td output{
+            letter-spacing: 0.5ch;
+            font-size: 1.2em;
+        }
     </style>
     <script defer>
         document.querySelectorAll("button").forEach(b => b.addEventListener(e => {
