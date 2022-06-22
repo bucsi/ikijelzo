@@ -7,12 +7,11 @@ import { canvas } from "./canvas.js"
 
 let video = null
 let slide = {}
-let prev_file = null
+
 async function main() {
-    prev_file = slide.file
     slide = await load(slide.id)
 
-    if (slide.file === prev_file) {
+    if (slide.file === "background.png") {
         setTimeout(main, secToMs(config.timeout))
         return
     }
