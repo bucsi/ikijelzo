@@ -68,6 +68,7 @@ class Storage implements IStorage
 
     public function update(string $id, $record)
     {
+        if (!isset($record["id"])) $record["id"] = $id;
         $this->contents[$id] = $record;
     }
 
