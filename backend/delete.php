@@ -16,8 +16,13 @@ require_once("templates/header.php");
 <body>
     <main>
         <h1><?= $slide["name"] ?></h1>
-        <p>Az alábbi kép <output><?= $slide["duration"] ?></output> másodpercig jelenik meg:</p>
-        <img src="<?= $slide["file"] ?>">
+        <?php if($slide["video"]): ?>
+            Az alábbi videót készülsz törölni:
+            <video controls muted src="<?=$slide["file"]?>"></video>
+        <?php else: ?>
+            <p>Az alábbi <output><?= $slide["duration"] ?></output> másodpercig megjelenő képet készülsz törölni:</p>
+            <img src="<?= $slide["file"] ?>">
+        <?php endif; ?>
         <p>Biztosan törlöd?</p>
         <form class="confirm-delete" action="_delete.php" method="post">
             <input type="hidden" name="id" value="<?= $slide["id"] ?>">
