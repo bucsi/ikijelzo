@@ -12,6 +12,7 @@ async function main() {
     slide = await load(slide.id)
 
     if (slide.file === "background.png") {
+        renderPicture(slide.file)
         setTimeout(main, secToMs(config.timeout))
         return
     }
